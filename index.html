@@ -415,6 +415,24 @@ table.tg td:hover{
 .dark body{background:#0e1014;}
 .dark .ques{background:#16191f;}
 
+/* put near :root */
+:root{
+  --fs-1:clamp(1.10rem,   0.95rem + 0.6vw, 1.35rem);  /* body text */
+  --fs-2:clamp(1.35rem,   1.10rem + 0.8vw, 1.80rem);  /* h2 task titles */
+  --fs-3:clamp(0.95rem,   0.80rem + 0.5vw, 1.10rem);  /* small notes, table cells */
+}
+
+body{ font-size:var(--fs-1); }
+
+.ques h2{
+  font-size:var(--fs-2);
+}
+
+table.tg td, table.tg th,
+select, input[type="text"]{
+  font-size:var(--fs-3);
+}
+
 
 </style>
 
